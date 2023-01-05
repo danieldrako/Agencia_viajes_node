@@ -8,13 +8,13 @@ const port = process.env.PORT || 9000;
 
 
 app.get('/', (req,res) => { //req- lo que enviamos; res - lo que express nos responde
-    res.render('Inicio')
+    res.send('Inicio')
  })
 app.get('/nosotros', (req,res) => { //req- lo que enviamos; res - lo que express nos responde
-    res.render('Nosotros')
+    res.send('Nosotros')
  })
 app.get('/contacto', (req,res) => { //req- lo que enviamos; res - lo que express nos responde
-    res.render('Contacto')
+    res.send('Contacto')
  })
 
 app.listen(port, () => { 
