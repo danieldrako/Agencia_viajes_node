@@ -4,14 +4,16 @@ import router from './routes/index.js';
 const app = express();
 
 
-//Definir puerto
+//?Definir puerto
 const port = process.env.PORT || 9000;
 
-//Habilitar PUG
+//?Habilitar PUG
 app.set('view engine', 'pug');
 
+//?Definir la carpeta publica
+app.use(express.static('public'));
 
-//Agregar Router
+//?Agregar Router
 app.use('/',router);
 
 
