@@ -1,4 +1,4 @@
-import express  from 'express';
+import express, { application }  from 'express';
 import router from './routes/index.js';
 
 const app = express();
@@ -9,6 +9,14 @@ const port = process.env.PORT || 9000;
 
 //?Habilitar PUG
 app.set('view engine', 'pug');
+
+//? Obtener el año actual
+app.use( (req, res, next) => { 
+    const year = new Date();
+
+    res.locals.actualYear = year.getFullYear();
+    next();
+ });
 
 //?Definir la carpeta publica
 app.use(express.static('public'));
