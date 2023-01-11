@@ -3,4 +3,30 @@ extends ./layout/index
 block contenido 
     main.container.mt-5 
         .row
-            h1=pagina
+            .col-md-5
+                img(src="img/nosotros.jpg", alt="imagen-nosotros", class="img-fluid")
+            .col-md-7
+                h1=pagina
+                blockquote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita voluptas dolores porro. Ut repudiandae nisi voluptatem magnam molestiae praesentium nam neque. Sunt voluptatibus dicta voluptate iure quisquam aspernatur, dolore iusto!
+
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sapiente quia dolor consectetur quisquam est, architecto omnis voluptatum in, aperiam reiciendis maiores harum dolore perspiciatis? Natus consequuntur atque laborum laboriosam.Cumque optio accusamus omnis, labore ipsum delectus laborum nobis debitis rem voluptatum. 
+
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit a sint ut nemo aperiam saepe odit sapiente quo quod beatae at aut, ullam architecto consequatur magni eos sunt harum voluptates.Minima vitae laborum exercitationem sunt accusamus repellendus, ipsa odio placeat vero ratione tempore eveniet! Veniam minima odio ipsam! Voluptate, atque et velit aspernatur architecto dicta aliquid exercitationem beatae provident minima.
+
+    .listado-iconos     
+        .container.mt-5.py-5.text-center 
+            .row 
+                .col-md-4
+                    img(src="img/icono_seguridad.svg", alt="ic_seguridad", class = "img-fluid mb-4")
+                    h2.mb-4 Seguridad
+                    p Minima vitae laborum exercitationem sunt accusamus repellendus, ipsa odio placeat vero ratione tempore eveniet! Veniam minima odio ipsam! Voluptate, atque et velit aspernatur architecto dicta aliquid exercitationem beatae provident minima.
+
+                .col-md-4
+                    img(src="img/icono_destinos.svg", alt="ic_destinos", class = "img-fluid mb-4")
+                    h2.mb-4 Mejores destinos
+                    p Minima vitae laborum exercitationem sunt accusamus repellendus, ipsa odio placeat vero ratione tempore eveniet! Veniam minima odio ipsam! Voluptate, atque et velit aspernatur architecto dicta aliquid exercitationem beatae provident minima.
+
+                .col-md-4
+                    img(src="img/icono_precios.svg", alt="ic_precios", class = "img-fluid mb-4")
+                    h2.mb-4 Los Mejores Precios
+                    p Minima vitae laborum exercitationem sunt accusamus repellendus, ipsa odio placeat vero ratione tempore eveniet! Veniam minima odio ipsam! Voluptate, atque et velit aspernatur architecto dicta aliquid exercitationem beatae provident minima.
