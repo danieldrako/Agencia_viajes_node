@@ -19,7 +19,7 @@ const paginaInicio = (req,res) => { //req- lo que enviamos; res - lo que express
     console.log(viajes)
     
     res.render('viajes',{
-        pagina: 'Viajes',
+        pagina: 'Próximos Viajes',
         viajes,
     });
  }
