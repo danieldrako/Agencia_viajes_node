@@ -1,5 +1,6 @@
+import {Testimonial} from '../models/Testimoniales.js'
 
-const guardarTestimonial = (req,res) => { 
+const guardarTestimonial = async(req,res) => { 
     
    //? Validar
 
@@ -20,6 +21,7 @@ const guardarTestimonial = (req,res) => {
     }
 
     if(errores.length > 0){
+
         //*Mostrar la vista con errores
         res.render('testimoniales',{
             pagina: 'Testimoniales',
@@ -29,7 +31,20 @@ const guardarTestimonial = (req,res) => {
             mensaje
         })
     } else {
-        
+        //
+
+        try {
+            await Testimonial.create({
+                nombre,
+                correo,
+                mensaje
+            });
+
+            res.redirect('/testimoniales');
+        } catch (error) {   
+            console.log(error)
+        }
+
     }
 
  }
