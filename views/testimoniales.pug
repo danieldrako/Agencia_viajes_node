@@ -6,10 +6,12 @@ block contenido
       
       .col-md-12
         h2.text-center Agrega un Testimonial
-        
+        if(errores) 
+          each error in errores
+            .alert.alert-danger.text-center=error.mensaje
         .row.justify-content-center
           .col-md-8
-            form(action="" method="post")
+            form(action="/testimoniales" method="POST")
               .form-group
                 label(for='nombre') Nombre
                 input#nombre.form-control(type='text', placeholder='Tu Nombre', name="nombre", value=nombre)
