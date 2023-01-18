@@ -3,7 +3,7 @@ extends ./layout/index
 block contenido 
   main.container.mt-5 #{pagina}
     .row
-      
+
       .col-md-12
         h2.text-center Agrega un Testimonial
         if(errores) 
@@ -20,5 +20,6 @@ block contenido
                 input#correo.form-control(type='email', placeholder='Tu Correo Electrónico', name="correo", value=correo)
               .form-group
                 label(for='mensaje') Mensaje
-                textarea#mensaje.form-control(name="mensaje", rows=3, placeholder="Tu Mensaje", value=mensaje)
+                textarea#mensaje(class='form-control', name="mensaje", placeholder="Tu Mensaje", rows = 3) = mensaje 
+
               input.btn.btn-success.btn-block(type="submit")
