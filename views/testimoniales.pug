@@ -1,9 +1,9 @@
 extends ./layout/index
 
 block contenido 
-  main.container.mt-5 #{pagina}
+  main.container.mt-5
     .row
-
+      include ./layout/testimoniales
       .col-md-12
         h2.text-center Agrega un Testimonial
         if(errores) 
@@ -11,7 +11,7 @@ block contenido
             .alert.alert-danger.text-center=error.mensaje
         .row.justify-content-center
           .col-md-8
-            form(action="/testimoniales" method="POST")
+            form(action="/testimoniales" method="post")
               .form-group
                 label(for='nombre') Nombre
                 input#nombre.form-control(type='text', placeholder='Tu Nombre', name="nombre", value=nombre)
@@ -20,6 +20,5 @@ block contenido
                 input#correo.form-control(type='email', placeholder='Tu Correo Electrónico', name="correo", value=correo)
               .form-group
                 label(for='mensaje') Mensaje
-                textarea#mensaje(class='form-control', name="mensaje", placeholder="Tu Mensaje", rows = 3)=mensaje 
-
+                textarea#mensaje.form-control(name="mensaje", rows=3, placeholder="Tu Mensaje", value=mensaje)
               input.btn.btn-success.btn-block(type="submit")
